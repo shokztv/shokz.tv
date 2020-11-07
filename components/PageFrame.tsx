@@ -1,5 +1,6 @@
 import { ReactElement, ReactNode } from "react";
 import Head from 'next/head';
+import Header from "./Sections/Header";
 
 
 export default function PageFrame({children}: {children: ReactNode}): ReactElement {
@@ -8,6 +9,8 @@ export default function PageFrame({children}: {children: ReactNode}): ReactEleme
             <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
             <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
         </Head>
+
+        <Header />
 
         {children}
 
