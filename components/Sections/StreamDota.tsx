@@ -37,6 +37,7 @@ export default function StreamDota(): ReactElement {
         <style jsx>{`
             .productionInfo {
                 text-align: center;
+                font-size: .8rem;
             }   
 
             a {

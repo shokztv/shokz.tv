@@ -36,6 +36,7 @@ export default function Contact(): ReactElement {
         <style jsx>{`
             .center {
                 text-align: center;
+                font-size: .8rem;
             }
             .contactRow {
                 display: flex;

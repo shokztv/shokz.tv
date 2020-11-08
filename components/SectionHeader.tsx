@@ -15,7 +15,7 @@ export default function SectionHeader({children, noMargin, white, yellow}: Props
 
         <style jsx>{`
             h3 {
-                font-size: 2rem;
+                font-size: 1.75rem;
                 color: var(--darkGrey);
                 margin-bottom: 4rem;
                 text-transform: uppercase;

@@ -55,7 +55,7 @@ export default function Header(): ReactElement {
             }
 
             nav {
-                font-size: 1.1rem;
+                font-size: .9rem;
                 text-transform: uppercase;
                 display: flex;
                 align-items: center;

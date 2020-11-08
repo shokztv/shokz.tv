@@ -55,14 +55,14 @@ export default function HeroBanner(): ReactElement {
                 color: var(--orange);
                 margin: 0;
                 margin-bottom: .5rem;
-                font-size: 4rem;
+                font-size: 2rem;
             }
 
             h2 {
                 color: #FFF;
                 margin: 0;
                 font-weight: 400;
-                font-size: 2rem;
+                font-size: 1.25rem;
             }
 
             .socials {
@@ -89,6 +89,7 @@ export default function HeroBanner(): ReactElement {
                 color: #FFF;
                 border-radius: 2px;
                 border: 2px solid #FFF;
+                font-size: .75rem;
                 padding: .5rem 1rem;
             }
         `}</style>

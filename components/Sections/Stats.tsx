@@ -74,6 +74,7 @@ export default function Stats(): ReactElement {
             .description {
                 padding: 0 1rem;
                 color: #FFF;
+                font-size: .8rem;
             }
 
             .highlight {

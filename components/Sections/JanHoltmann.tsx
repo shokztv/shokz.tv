@@ -4,14 +4,14 @@ import SectionHeader from "../SectionHeader";
 
 export default function JanHoltmann(): ReactElement {
     return <Container bg={'blue'} reduceSpacing>
-        <div className={'row'}>
+        <div className={'row outer'}>
             <div className={'row'}>
                 <div className={'avatar'}>
 
                 </div>
                 <div className={'info'}>
                     <h6>Jan "shokz" Holtmann</h6>
-                    <div>
+                    <div className={'sub'}>
                         E-Sports Kommentator, Moderator & Host - Auch außerhalb von Dota 2
                     </div>
                 </div>
@@ -39,12 +39,12 @@ export default function JanHoltmann(): ReactElement {
                 width: 60px;
                 border-radius: 30px;
                 flex-shrink: 0;
-                margin: 0 1.5rem 0 1rem;
+                margin: 0 1.5rem 0 0;
                 background-color: #CCC;
             }
 
             h6 {
-                font-size: 1rem;
+                font-size: 1.25rem;
                 color: var(--orange);
                 margin: 0;
             }
@@ -56,6 +56,14 @@ export default function JanHoltmann(): ReactElement {
                 flex-shrink: 0;
                 border: 2px solid #FFF;
                 border-radius: 4px;
+            }
+
+            .sub {
+                font-size: .9rem;
+            }
+
+            .outer {
+                padding: 0 2rem;
             }
         `}</style>
     </Container>
