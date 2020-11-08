@@ -2,8 +2,15 @@
 import classNames from "classnames";
 import { ReactElement, ReactNode } from "react";
 
-export default function SectionHeader({children, yellow}: {children: ReactNode; yellow?: boolean;}): ReactElement {
-    return <h3 className={classNames({yellow})}>
+interface Props {
+    children: ReactNode;
+    noMargin?: boolean;
+    yellow?: boolean;
+    white?: boolean;
+}
+
+export default function SectionHeader({children, noMargin, white, yellow}: Props): ReactElement {
+    return <h3 className={classNames({noMargin, white, yellow})}>
         {children}
 
         <style jsx>{`
@@ -14,8 +21,17 @@ export default function SectionHeader({children, yellow}: {children: ReactNode; 
                 text-transform: uppercase;
                 text-align: center;
             }
+
+            .noMargin {
+                margin-bottom: .5rem;
+            }
+
             .yellow {
                 color: var(--yellow);
+            }
+
+            .white {
+                color: #FFF;
             }
         `}</style>    
     </h3>;

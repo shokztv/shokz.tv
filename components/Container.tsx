@@ -5,9 +5,10 @@ interface Props {
     children: ReactNode;
     bg?: 'white' | 'grey' | 'blue'; 
     id?: string;
+    reduceSpacing?: boolean;
 }
-export default function Container({children, bg = 'white', id}: Props): ReactElement {
-    return <div className={classNames('container', bg)} id={id}>
+export default function Container({children, bg = 'white', id, reduceSpacing}: Props): ReactElement {
+    return <div className={classNames('container', bg, {reduceSpacing})} id={id}>
         <div className={'innerContainer'}>
             {children}
         </div>
@@ -25,6 +26,10 @@ export default function Container({children, bg = 'white', id}: Props): ReactEle
             }
             .blue {
                 background: var(--blue);
+            }
+
+            .reduceSpacing {
+                padding: 2rem 1rem;
             }
         `}</style>
     </div>

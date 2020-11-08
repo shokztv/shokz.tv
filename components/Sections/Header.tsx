@@ -35,6 +35,7 @@ export default function Header(): ReactElement {
                 color: #FFF;
                 background-color: var(--blue);
                 box-shadow: 2px 2px 10px rgba(0,0,0,.8);
+                z-index: 2;
             }
 
             .inner {
