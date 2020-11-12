@@ -9,6 +9,7 @@ import StreamDota from "../components/Sections/StreamDota";
 import JanHoltmann from "../components/Sections/JanHoltmann";
 import Contact from "../components/Sections/Contact";
 import Articles from "../components/Sections/Articles";
+import Footer from "../components/Sections/Footer";
 
 //#region <interfaces>
 export interface Tag {
@@ -90,6 +91,7 @@ const Index = ({articles, videos}: Props) => {
         <StreamDota />
         <JanHoltmann />
         <Contact />
+        <Footer />
     </PageFrame>
 }
 
@@ -99,11 +101,11 @@ export async function getStaticProps() {
     const articles = await fetchFeaturedArticle();
 
     return {
-      props: {
-        articles,
-        videos
-      },
+        props: {
+            articles,
+            videos
+        },
     }
-  }
-  
-  export default Index;
+}
+
+export default Index;

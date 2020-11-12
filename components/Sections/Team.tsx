@@ -29,7 +29,7 @@ export default function Team(): ReactElement {
 
 
         <div className={'threeColRow'}>
-            {team.map(({name, realName}) => <div className={'col'}>
+            {team.map(({name, realName}) => <div className={'col'} key={name}>
                 <div className={'colContent'}>
                     <div className={'userImage'}>
                         
