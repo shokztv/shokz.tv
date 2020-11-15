@@ -11,6 +11,11 @@ export default function Header(): ReactElement {
             </Link>
 
             <nav>
+                <Link href={'/'}>
+                    <a>
+                        Portfolio
+                    </a>
+                </Link>
                 <Link href={'/videos'}>
                     <a>
                         Alle Videos
@@ -22,13 +27,7 @@ export default function Header(): ReactElement {
                     </a>
                 </Link>
                 <a>
-                    Portfolio
-                </a>
-                <a>
                     Merch
-                </a>
-                <a>
-                    Kontakt
                 </a>
             </nav>
         </div>
