@@ -7,10 +7,13 @@ import chunk from 'lodash/chunk';
 import ArticleScroll from "../components/Articles/ArticleScroll";
 
 //#region <api>
+export async function fetchAllSlugs(): Promise<string[]> {
+    return await get<string[]>('/article/slugs');
+}
 
-export async function fetchAllArticles(): Promise<Partial<Article[]>> {
+export async function fetchAllArticles(): Promise<Article[]> {
     const articles = [];
-    const slugs = await get<string[]>('/article/slugs');
+    const slugs = await fetchAllSlugs();
     const chunks = chunk(slugs, 10);
 
     for(const chunk of chunks) {

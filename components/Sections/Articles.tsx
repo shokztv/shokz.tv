@@ -4,6 +4,7 @@ import Container from "../Container";
 import Picture from "../Picture";
 import SectionHeader from "../SectionHeader";
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 const TruncatedHtml = dynamic(
     () => import('../TruncatedHtml'),
@@ -17,29 +18,37 @@ export default function Articles({articles}: {articles: Article[]}): ReactElemen
     return <Container bg={'grey'}>
         <SectionHeader>Artikel</SectionHeader>
 
-        <div className={'headerArticle'}>
-            <div className={'articleThumbnail'}>
-                <Picture src={headerArticle.cover} webp={headerArticle.coverWEBP} jp2={headerArticle.coverJP2} alt={headerArticle.title} rounded />
-            </div>
+        <Link href={'/artikel/[slug]'} as={'/artikel/' + headerArticle.slug}>
+            <div className={'headerArticle'}>
+                <div className={'articleThumbnail'}>
+                    <Picture src={headerArticle.cover} webp={headerArticle.coverWEBP} jp2={headerArticle.coverJP2} alt={headerArticle.title} rounded />
+                </div>
 
-            <div className={'headerArticleInfo'}>
-                <h2>{headerArticle.title}</h2>
-                {headerArticle.body && <TruncatedHtml content={headerArticle.body}/>}
+                <div className={'headerArticleInfo'}>
+                    <h2>{headerArticle.title}</h2>
+                    {headerArticle.body && <TruncatedHtml content={headerArticle.body}/>}
+                </div>
             </div>
-        </div>
+        </Link>
 
         <div className={'hr'} />
 
         <div className={'articleRow'}>
-            {recentArticles.map(({id, title, cover, coverWEBP, coverJP2}) => <div key={id} className={'article'}>
-                <h4><TruncatedHtml content={title} maxLine={2} /></h4>
-                <div className={'articleRowThumbnail'}>
-                    <Picture src={cover} webp={coverWEBP} jp2={coverJP2} alt={title} rounded />
+            {recentArticles.map(({id, title, cover, coverWEBP, coverJP2, slug}) => <Link href={'/artikel/[slug]'} as={'/artikel/' + slug} key={id} >
+                <div className={'article'}>
+                    <h4><TruncatedHtml content={title} maxLine={2} /></h4>
+                    <div className={'articleRowThumbnail'}>
+                        <Picture src={cover} webp={coverWEBP} jp2={coverJP2} alt={title} rounded />
+                    </div>
                 </div>
-            </div>)}
+            </Link>)}
         </div>
 
         <style jsx>{`
+            .article, .headerArticle {
+                cursor: pointer;
+            }
+            
             .headerArticle {
                 display: flex;
                 align-items: center;

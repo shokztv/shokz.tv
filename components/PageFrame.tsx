@@ -16,6 +16,12 @@ export default function PageFrame({children}: {children: ReactNode}): ReactEleme
             {children}
         </div>
 
+        <style jsx>{`
+            .content {
+                padding-top: 4rem;
+            }    
+        `}</style>
+
         <style jsx global>{`
             html, body {
                 margin: 0;
@@ -32,10 +38,6 @@ export default function PageFrame({children}: {children: ReactNode}): ReactEleme
                 --lightGrey: #f4f4f4;
                 --blue: #162036;
                 --yellow: #E7D84A;
-            }
-
-            .content {
-                padding-top: 4rem;
             }
         `}</style>
     </div>

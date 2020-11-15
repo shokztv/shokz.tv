@@ -3,6 +3,7 @@ import { Article } from "../../pages";
 import Picture from "../Picture";
 import dayjs from 'dayjs';
 import TruncatedHtml from "../TruncatedHtml";
+import Link from 'next/link';
 
 
 export function formatDate(ts: number = null, format: string = 'DD.MM.YYYY'): string {
@@ -15,16 +16,18 @@ interface Props {
 
 export default function ArticleScroll({articles}: Props): ReactElement {
     return <div className={'articles'}>
-        {articles.map(({id, body, created, title, cover, coverJP2, coverWEBP, author: {name}}) => <div key={id} className={'articleRow'}>
-            <div className={'cover'}>
-                <Picture alt={title} rounded webp={coverWEBP} src={cover} jp2={coverJP2} />
+        {articles.map(({id, body, created, title, cover, coverJP2, coverWEBP, author: {name}, slug}) => <Link key={id} href={'/artikel/[slug]'} as={'/artikel/' + slug}>
+            <div className={'articleRow'}>
+                <div className={'cover'}>
+                    <Picture alt={title} rounded webp={coverWEBP} src={cover} jp2={coverJP2} />
+                </div>
+                <div className={'details'}>
+                    <h2>{title}</h2>
+                    <div className={'published'}>veröffentlicht am {formatDate(created)} von {name}</div>
+                    <TruncatedHtml content={body} maxLine={2}/>
+                </div>
             </div>
-            <div className={'details'}>
-                <h2>{title}</h2>
-                <div className={'published'}>veröffentlicht am {formatDate(created)} von {name}</div>
-                <TruncatedHtml content={body} maxLine={2}/>
-            </div>
-        </div>)}
+        </Link>)}
 
         <style jsx>{`
             .articleRow {
