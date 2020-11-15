@@ -11,16 +11,20 @@
     "@types/node": "^14.14.6",
     "@types/react": "^16.9.55",
     "classnames": "^2.2.6",
+    "dayjs": "^1.9.6",
+    "lodash": "^4.17.20",
     "next": "10.0.0",
     "node-fetch": "^2.6.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-lines-ellipsis": "^0.14.1",
     "react-truncate-html": "^0.1.7",
+    "react-visibility-sensor": "^5.1.1",
     "typescript": "^4.0.5"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.11",
+    "@types/lodash": "^4.14.165",
     "@types/node-fetch": "^2.5.7"
   }
 }

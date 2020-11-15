@@ -37,7 +37,7 @@ export default function HeroBanner(): ReactElement {
         <style jsx>{`
             .heroBanner {
                 background-color: var(--blue);
-                padding: 7rem 0 4rem;
+                padding: 3rem 0 4rem;
             } 
 
             .inner {

@@ -1,20 +1,26 @@
 import { ReactElement } from "react";
-
+import Link from 'next/link';
 
 export default function Header(): ReactElement {
     return <header>
         <div className={'inner'}>
-            <div className={'logo'}>
-                <img height={'50px'} src={'/images/logo.png'} />
-            </div>
+            <Link href={'/'}>
+                <div className={'logo'}>
+                    <img height={'50px'} src={'/images/logo.png'} />
+                </div>
+            </Link>
 
             <nav>
-                <a>
-                    Alle Videos
-                </a>
-                <a>
-                    Alle Artikel
-                </a>
+                <Link href={'/videos'}>
+                    <a>
+                        Alle Videos
+                    </a>
+                </Link>
+                <Link href={'/articles'}>
+                    <a>
+                        Alle Artikel
+                    </a>
+                </Link>
                 <a>
                     Portfolio
                 </a>
@@ -62,6 +68,11 @@ export default function Header(): ReactElement {
                 justify-content: space-evenly;
                 flex-grow: 1;
                 font-weight: bold;
+            }
+
+            a {
+                color: #FFF;
+                text-decoration: none;
             }
         `}</style>
     </header>;
