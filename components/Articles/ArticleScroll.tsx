@@ -27,15 +27,15 @@ export default function ArticleScroll({articles}: Props): ReactElement {
         </div>)}
 
         <style jsx>{`
-            .articles {
-            }    
-
             .articleRow {
                 display: flex;
                 align-items: center;
                 margin: -1rem -1rem 1rem -1rem;
                 cursor: pointer;
                 padding-bottom: 1rem;
+            }
+
+            .articleRow:not(:last-child) {
                 border-bottom: 1px solid #EEE;
             }
 
