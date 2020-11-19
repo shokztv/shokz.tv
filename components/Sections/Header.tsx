@@ -57,6 +57,7 @@ export default function Header(): ReactElement {
                 padding: .75rem 0;
                 margin-top: -3px;
                 flex-shrink: 0;
+                cursor: pointer:
             }
 
             nav {

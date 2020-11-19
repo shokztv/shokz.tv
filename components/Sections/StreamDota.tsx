@@ -10,7 +10,7 @@ export default function StreamDota(): ReactElement {
 
         <div className={'productionInfo'}>
             Zusammen mit unserem Partner <a href={'https://streamdota.de'}>StreamDota.de</a> können wir den qualitativen Wert der Dota 2-Berichterstattung umfassend verbessern. 
-            Durch <span className={'highlight'}>Live-Statistiken</span> kann das Spielgeschehen für den Zuschauer verdeutlicht werden. Eine exklusive gebrandete <span className={'highlight'}>Voting-Funktion</span> bietet die ideale Möglichkeit zur Produktplatzierung für Ihre Sponsoern - Alles individuell anpassbar!
+            Durch <span className={'highlight'}>Live-Statistiken</span> kann das Spielgeschehen für den Zuschauer verdeutlicht werden. Eine exklusive gebrandete <span className={'highlight'}>Voting-Funktion</span> bietet die ideale Möglichkeit zur Produktplatzierung für Ihre Sponsoren - Alles individuell anpassbar!
         </div>
 
         <div className={'preview'}>
@@ -37,7 +37,8 @@ export default function StreamDota(): ReactElement {
         <style jsx>{`
             .productionInfo {
                 text-align: center;
-                font-size: .8rem;
+                font-size: .9rem;
+                line-height: 1.3rem;
             }   
 
             a {

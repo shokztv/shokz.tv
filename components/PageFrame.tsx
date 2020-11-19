@@ -31,13 +31,15 @@ export default function PageFrame({children}: {children: ReactNode}): ReactEleme
             * {
                 box-sizing: border-box;
                 font-family: 'Roboto Condensed', sans-serif;
+                color: var(--darkGrey);
             }
             :root {
                 --orange: #f19e0e;
                 --darkGrey: #373737;
                 --lightGrey: #f4f4f4;
                 --blue: #162036;
-                --yellow: #E7D84A;
+                --yellow: #EAD811;
+                --darkBlue: #07122b;
             }
         `}</style>
     </div>

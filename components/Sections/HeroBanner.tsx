@@ -8,24 +8,25 @@ export default function HeroBanner(): ReactElement {
     return <div className={'heroBanner'}>
         <div className={'inner'}>
             <div className={'logo'}>
-                <img src={'/images/logo.png'} height={'120px'} />
+                <img src={'/images/herobanner_logo.png'} height={'120px'} />
             </div>
+            
             <div className={'heroInfo'}>
                 <h1>shokzTV</h1>
                 <h2>Dota 2-Kommentatorenkanal</h2>
                 <div className={'socials'}>
-                    <a className={'link'}>
+                    <div className={'link twitter'}>
                         <Twitter />
-                    </a>
-                    <a className={'link twitch'}>
+                    </div>
+                    <div className={'link twitch'}>
                         <Twitch />
-                    </a>
-                    <a className={'link discord'}>
+                    </div>
+                    <div className={'link discord'}>
                         <Discord />
-                    </a>
-                    <a className={'link instagram'}>
+                    </div>
+                    <div className={'link instagram'}>
                         <Instagram />
-                    </a>
+                    </div>
                 </div>
 
                 <div className={'btn'}>
@@ -37,7 +38,7 @@ export default function HeroBanner(): ReactElement {
         <style jsx>{`
             .heroBanner {
                 background-color: var(--blue);
-                padding: 3rem 0 4rem;
+                padding: 5rem 0 4rem;
             } 
 
             .inner {
@@ -72,16 +73,11 @@ export default function HeroBanner(): ReactElement {
             }
 
             .link {
-                margin: 0 1rem;
                 cursor: pointer;
             }
-            
-            .link:first-child {
-                margin-left: 0;
-            }
-            
-            .link:last-child {
-                margin-right: 0;
+
+            .twitter, .twitch, .discord {
+                margin-right: 2rem;
             }
 
             .btn {
@@ -89,8 +85,9 @@ export default function HeroBanner(): ReactElement {
                 color: #FFF;
                 border-radius: 2px;
                 border: 2px solid #FFF;
-                font-size: .75rem;
+                font-size: .8rem;
                 padding: .5rem 1rem;
+                text-transform: uppercase;
             }
         `}</style>
     </div>;

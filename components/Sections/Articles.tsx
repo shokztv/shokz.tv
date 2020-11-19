@@ -26,7 +26,7 @@ export default function Articles({articles}: {articles: Article[]}): ReactElemen
 
                 <div className={'headerArticleInfo'}>
                     <h2>{headerArticle.title}</h2>
-                    {headerArticle.body && <TruncatedHtml content={headerArticle.body}/>}
+                    <div className={'articleContent'}>{headerArticle.body && <TruncatedHtml content={headerArticle.body}/>}</div>
                 </div>
             </div>
         </Link>
@@ -94,6 +94,10 @@ export default function Articles({articles}: {articles: Article[]}): ReactElemen
 
             h2 {
                 margin-top: 0rem;
+            }
+
+            .articleContent {
+                line-height: 1.4rem;
             }
         `}</style>
     </Container>

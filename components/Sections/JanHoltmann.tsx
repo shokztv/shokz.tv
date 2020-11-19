@@ -7,7 +7,7 @@ export default function JanHoltmann(): ReactElement {
         <div className={'row outer'}>
             <div className={'row'}>
                 <div className={'avatar'}>
-
+                    <img src={'/images/janholtmann.png'} alt={'jan holtmann avatar'} />
                 </div>
                 <div className={'info'}>
                     <h6>Jan "shokz" Holtmann</h6>
@@ -18,7 +18,7 @@ export default function JanHoltmann(): ReactElement {
             </div>
 
             <a href={''} className={'btn'}>
-                Zur Website
+                Zur Webseite
             </a>
         </div>
 
@@ -35,12 +35,10 @@ export default function JanHoltmann(): ReactElement {
             }
 
             .avatar {
-                height: 60px;
-                width: 60px;
-                border-radius: 30px;
+                height: 110px;
+                border-radius: 50%;
                 flex-shrink: 0;
                 margin: 0 1.5rem 0 0;
-                background-color: #CCC;
             }
 
             h6 {
@@ -56,10 +54,12 @@ export default function JanHoltmann(): ReactElement {
                 flex-shrink: 0;
                 border: 2px solid #FFF;
                 border-radius: 4px;
+                text-transform: uppercase;
             }
 
             .sub {
                 font-size: .9rem;
+                color: #FFF;
             }
 
             .outer {

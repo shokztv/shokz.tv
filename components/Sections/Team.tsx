@@ -13,12 +13,12 @@ const team = [
         realName: 'Jan Holtmann',
     },
     {
-        name: 'shokzTV',
-        realName: 'Jan Holtmann',
+        name: 'DaHorsty',
+        realName: 'Nocolai Krybus',
     },
     {
-        name: 'shokzTV',
-        realName: 'Jan Holtmann',
+        name: 'dogeasy',
+        realName: 'Pascal Uhlig',
     },
 ]
 
@@ -26,7 +26,6 @@ export default function Team(): ReactElement {
     return <Container>
         <SectionHeader noMargin>Das Team</SectionHeader>
         <SectionSubHeader>// Moderatoren, Kommentatoren und Analysten die mit uns arbeiten //</SectionSubHeader>
-
 
         <div className={'threeColRow'}>
             {team.map(({name, realName}) => <div className={'col'} key={name}>

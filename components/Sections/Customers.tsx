@@ -6,7 +6,7 @@ import SectionSubHeader from "../SectionSubHeader";
 export default function Customers(): ReactElement {
     return <Container>
         <SectionHeader noMargin>Kundenportfolio</SectionHeader>
-        <SectionSubHeader>// shokztv hat bereits mit folgenden turnierveranstaltern zusammengearbeitet //</SectionSubHeader>
+        <SectionSubHeader>// shokztv hat bereits mit folgenden organisationen zusammengearbeitet //</SectionSubHeader>
 
         <div className={'customers'}>
             <div className={'row'}>
@@ -14,7 +14,7 @@ export default function Customers(): ReactElement {
                     <img src={'/images/customers/eslm.png'} />
                 </div>
                 <div className={'customer'}>
-                    <img src={'/images/customers/rog.png'} />
+                    <img src={'/images/customers/weplay.png'} />
                 </div>
                 <div className={'customer'}>
                     <img src={'/images/customers/eslone.png'} />

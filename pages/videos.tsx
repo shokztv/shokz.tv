@@ -14,6 +14,7 @@ export async function fetchAllVideos(): Promise<Partial<Video[]>> {
 const Videos = ({videos}: {videos: Video[]}) => {
     return <PageFrame>
         <Container>
+            <br />
             <SectionHeader>Alle Videos</SectionHeader>
             <VideoScroll videos={videos} />
         </Container>

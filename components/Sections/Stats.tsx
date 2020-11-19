@@ -74,11 +74,12 @@ export default function Stats(): ReactElement {
             .description {
                 padding: 0 1rem;
                 color: #FFF;
-                font-size: .8rem;
+                font-size: .9rem;
+                line-height: 1.3rem;
             }
 
             .highlight {
-                color: var(--orange);
+                color: var(--yellow);
             }
             .stats {
                 margin: 6rem 0 2rem 0;
@@ -95,15 +96,17 @@ export default function Stats(): ReactElement {
                 width: 3rem;
                 margin: 1rem 0;
                 height: 1px;
-                background-color: #F0A93B;
+                background-color: var(--yellow);
             }
             .value {
                 font-size: 1.5rem;
                 font-weight: bold;
+                color: #FFF;
             }
             .label {
                 text-transform: uppercase;
                 text-align: center;
+                color: #FFF;
             }
         `}</style>
     </Container>

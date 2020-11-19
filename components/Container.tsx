@@ -15,7 +15,7 @@ export default function Container({children, bg = 'white', id, reduceSpacing}: P
 
         <style jsx>{`
             .container {
-                padding: 4rem 1rem;
+                padding: 2rem 1rem 4rem 1rem;
             }
             .innerContainer {
                 max-width: 1200px;

@@ -20,6 +20,7 @@ export default function LatestVods({videos}: {videos: Video[]}): ReactElement {
             .videoContainer {
                 display: flex;
                 margin: -2rem;
+                margin-bottom: 0;
                 justify-content: center;
             }    
 

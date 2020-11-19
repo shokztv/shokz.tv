@@ -67,7 +67,7 @@ export default function Footer(): ReactElement {
 
         <style jsx>{`
             .footerWrapper {
-                background-color: #424242;
+                background-color: var(--blue);
             }
             .footerWrapperInner {
                 max-width: 1175px;
@@ -82,7 +82,7 @@ export default function Footer(): ReactElement {
                 color: #FFF;
             }
             .footerDisclaimer {
-                background-color: #343434;
+                background-color: var(--darkBlue);
                 text-align: center;
                 color: rgba(255,255,255,.8);
                 padding: 10px;

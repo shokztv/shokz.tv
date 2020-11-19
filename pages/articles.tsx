@@ -27,6 +27,7 @@ export async function fetchAllArticles(): Promise<Article[]> {
 const Articles = ({articles}: {articles: Article[]}) => {
     return <PageFrame>
         <Container>
+            <br />
             <SectionHeader>Alle Artikel</SectionHeader>
             <ArticleScroll articles={articles} />
         </Container>

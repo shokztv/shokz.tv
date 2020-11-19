@@ -15,7 +15,7 @@ export async function fetchArticle(slug: string): Promise<Article> {
 const ArticleView = ({article}: {article: Article}) => {
     return <PageFrame>
         <Container>
-            <SingleArticleView article={article} />
+            {article && <SingleArticleView article={article} />}
         </Container>
         <Footer />
     </PageFrame>
