@@ -9,42 +9,39 @@ export default function Customers(): ReactElement {
         <SectionSubHeader>// shokztv hat bereits mit folgenden organisationen zusammengearbeitet //</SectionSubHeader>
 
         <div className={'customers'}>
-            <div className={'row'}>
-                <div className={'customer'}>
-                    <img src={'/images/customers/eslm.png'} />
-                </div>
-                <div className={'customer'}>
-                    <img src={'/images/customers/weplay.png'} />
-                </div>
-                <div className={'customer'}>
-                    <img src={'/images/customers/eslone.png'} />
-                </div>
-                <div className={'customer'}>
-                    <img src={'/images/customers/joindota.png'} />
-                </div>
+            <div className={'customer'}>
+                <img src={'/images/customers/eslm.png'} />
+            </div>
+            <div className={'customer'}>
+                <img src={'/images/customers/weplay.png'} />
+            </div>
+            <div className={'customer'}>
+                <img src={'/images/customers/eslone.png'} />
+            </div>
+            <div className={'customer'}>
+                <img src={'/images/customers/joindota.png'} />
             </div>
         </div>
 
         <style jsx>{`
             .customers {
-                position: relative;
-                height: 150px;
-                width: 100vw;
-                margin-left: calc((50vw - 600px) * -1);
-                z-index: 0;
-            }
-
-            .row {
-                width: 100%;
+                padding: 0 4rem;
                 display: flex;
                 justify-content: space-around;
             }
 
-            @media only screen and (max-width: 1200px) {
+            .customer {
+                height: 150px;
+                width: 25%;
+                text-align: center;
+            }
+
+            @media only screen and (max-width: 900px) {
                 .customers {
-                    margin-left: 0;
-                    padding: 0 4rem;
-                    width: 100vw;
+                    flex-wrap: wrap;
+                }
+                .customer {
+                    width: 45%;
                 }
             }
         `}</style>

@@ -99,6 +99,39 @@ export default function Articles({articles}: {articles: Article[]}): ReactElemen
             .articleContent {
                 line-height: 1.4rem;
             }
+
+            @media only screen and (max-width: 800px) {
+                .headerArticle {
+                    flex-direction: column;
+                }
+
+                .articleThumbnail {
+                    margin-bottom: 2rem;
+                    width: 95%;
+                }
+
+                .headerArticleInfo {
+                    width: 95%;
+                }
+
+                .articleRow {
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                }
+
+                .article {
+                    width: 48%;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+
+                .article {
+                    width: 95%;
+                    margin-bottom: 2rem;
+                }
+            }
         `}</style>
     </Container>
 }

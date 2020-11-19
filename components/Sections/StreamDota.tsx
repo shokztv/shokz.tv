@@ -70,6 +70,17 @@ export default function StreamDota(): ReactElement {
                 width: 45%;
                 text-align: center; 
             }
+
+
+            @media only screen and (max-width: 850px) {
+                .preview {
+                    flex-wrap: wrap;
+                }
+                .previewContainer {
+                    width: 95%;
+                    margin-bottom: 4rem;
+                }
+            }
         `}</style>
     </Container>
 }

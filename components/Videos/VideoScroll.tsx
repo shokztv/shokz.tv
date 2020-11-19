@@ -18,6 +18,18 @@ export default function VideoScroll({videos}: Props): ReactElement {
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-gap: 2rem;
             }    
+
+            @media only screen and (max-width: 850px) {
+                .vodGrid {
+                grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                .vodGrid {
+                grid-template-columns: 1fr;
+                }
+            }
         `}</style>
     </div>
 }

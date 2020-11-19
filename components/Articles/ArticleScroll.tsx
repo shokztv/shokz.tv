@@ -65,6 +65,17 @@ export default function ArticleScroll({articles}: Props): ReactElement {
                 font-size: .75rem;
                 margin-bottom: 1rem;
             }
+
+            @media only screen and (max-width: 750px) {
+                .articleRow {
+                    flex-wrap: wrap;
+                }
+
+                .cover, .details {
+                    width: 95%;
+                }
+
+            }
         `}</style>
     </div>
 }

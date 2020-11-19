@@ -29,6 +29,24 @@ export default function LatestVods({videos}: {videos: Video[]}): ReactElement {
                 width: 30%;
                 padding: 1rem;
             }
+
+            @media only screen and (max-width: 1000px) {
+                .videoContainer {
+                    margin: 0;
+                    flex-wrap: wrap;
+                    padding: 0 2rem;
+                }
+
+                .vod {
+                    width: 48%;
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                .vod {
+                    width: 98%;
+                }
+            }
         `}</style>
     </Container>
 }

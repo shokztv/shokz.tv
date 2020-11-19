@@ -108,6 +108,46 @@ export default function Stats(): ReactElement {
                 text-align: center;
                 color: #FFF;
             }
+
+            @media only screen and (max-width: 780px) {
+                .mainInfo {
+                    flex-direction: column;
+                }
+
+                .logo {
+                    margin-bottom: 2rem;
+                }
+
+                .description {
+                    text-align: center;
+                }
+            }
+
+            @media only screen and (max-width: 850px) {
+                .stats {
+                    flex-wrap: wrap;
+                    margin-bottom: 0;
+                }
+                .stat {
+                    width: 45%;
+                    margin-bottoM: 4rem;
+                }
+            }
+            
+            @media only screen and (max-width: 580px) {
+                .social {
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+                .logo {
+                    width: 90%;
+                    text-align: center;
+                }
+                .social .link {
+                    width: 40%;
+                    text-align: center;
+                }
+            }
         `}</style>
     </Container>
 }

@@ -17,7 +17,7 @@ export default function JanHoltmann(): ReactElement {
                 </div>
             </div>
 
-            <a href={''} className={'btn'}>
+            <a href={'https://jan-holtmann.de/'} className={'btn'}>
                 Zur Webseite
             </a>
         </div>
@@ -64,6 +64,17 @@ export default function JanHoltmann(): ReactElement {
 
             .outer {
                 padding: 0 2rem;
+            }
+
+
+            @media only screen and (max-width: 850px) {
+                .outer {
+                    flex-wrap: wrap;
+                }
+                
+                a {
+                    margin: 2rem auto 0 auto;
+                }
             }
         `}</style>
     </Container>

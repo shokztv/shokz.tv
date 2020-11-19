@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import Container from "../Container";
 import Discord from "../Icons/Discord";
+import Homepage from "../Icons/Homepage";
 import Instagram from "../Icons/Instagram";
 import Twitch from "../Icons/Twitch";
 import Twitter from "../Icons/Twitter";
@@ -9,16 +10,26 @@ import SectionSubHeader from "../SectionSubHeader";
 
 const team = [
     {
+        image: '/images/team/shokztv.png',
         name: 'shokzTV',
         realName: 'Jan Holtmann',
+        homepage: 'https://jan-holtmann.de/',
+        twitter: 'https://twitter.com/janholtma',
+        instagram: 'https://instagram.com/janholtma',
+
     },
     {
+        image: '/images/team/dahorsty.png',
         name: 'DaHorsty',
-        realName: 'Nocolai Krybus',
+        realName: 'Nicolai Krybus',
+        twitter: 'https://twitter.com/dahorsty',
+        instagram: 'https://instagram.com/dahorsty',
     },
     {
+        image: '/images/team/dogeasy.png',
         name: 'dogeasy',
         realName: 'Pascal Uhlig',
+        twitter: 'https://twitter.com/dogeasydota',
     },
 ]
 
@@ -28,20 +39,19 @@ export default function Team(): ReactElement {
         <SectionSubHeader>// Moderatoren, Kommentatoren und Analysten die mit uns arbeiten //</SectionSubHeader>
 
         <div className={'threeColRow'}>
-            {team.map(({name, realName}) => <div className={'col'} key={name}>
+            {team.map(({image, name, realName, homepage, twitter, instagram}) => <div className={'col'} key={name}>
                 <div className={'colContent'}>
                     <div className={'userImage'}>
-                        
+                        <img src={image} alt={name + ' avatar'} width={'100%'} />
                     </div>
 
                     <h5>{name}</h5>
                     <h6>{realName}</h6>
 
                     <div className={'socials'}>
-                        <Twitter />
-                        <Twitch />
-                        <Discord />
-                        <Instagram />
+                        {homepage && <Homepage link={homepage}  />}
+                        {twitter && <Twitter link={twitter}  />}
+                        {instagram && <Instagram link={instagram} />}
                     </div>
                 </div>
             </div>)}
@@ -61,7 +71,6 @@ export default function Team(): ReactElement {
             }
 
             .colContent {
-                padding: 3rem 2rem;
                 display: flex;
                 align-items: stretch;
                 flex-direction: column;
@@ -69,10 +78,12 @@ export default function Team(): ReactElement {
             }
 
             .userImage {
-                background-color: #000;
-                height: 250px;
                 width: 200px;
                 margin: 0 auto;
+            }
+
+            img {
+                border-radius: 50%;
             }
 
             h5, h6 {
@@ -96,6 +107,26 @@ export default function Team(): ReactElement {
                 margin: 2rem 0 0 0;
                 width: calc(100% + 4rem);
                 margin-left: -2rem;
+            }
+
+            @media only screen and (max-width: 900px) {
+                .threeColRow {
+                    flex-wrap: wrap;
+                    margin: 0;
+                    justify-content: space-evenly;
+                }
+
+                .col {
+                    width: 45%;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            @media only screen and (max-width: 720px) {
+                .col {
+                    width: 95%;
+                    margin-bottom: 2rem;
+                }
             }
         `}</style>
     </Container>

@@ -89,6 +89,16 @@ export default function HeroBanner(): ReactElement {
                 padding: .5rem 1rem;
                 text-transform: uppercase;
             }
+
+            @media only screen and (max-width: 750px) {
+                .logo {
+                    display: none;
+                }
+
+                .heroInfo {
+                    padding: 0 3rem;
+                }
+            }
         `}</style>
     </div>;
 }

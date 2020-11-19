@@ -74,6 +74,12 @@ export default function Header(): ReactElement {
                 color: #FFF;
                 text-decoration: none;
             }
+
+            @media only screen and (max-width: 700px) {
+                .logo {
+                    display: none;
+                }
+            }
         `}</style>
     </header>;
 }
