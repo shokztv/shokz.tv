@@ -20,7 +20,7 @@ export default function Services(): ReactElement {
                         </div>
                         <h5>Kommentieren</h5>
                         <div className={'description'}>
-                            Wir kommentieren & moderieren Ihr Dota 2-Event. Dies kann auf unserem "shokzTV" Kanal geschehen oder Ihrem Kanal. Dabei kümmern wir uns um die Einteilung der Kommentatoren.
+                        Wir kommentieren und moderieren Ihr Dota 2-Event. Dabei legen wir großen Wert auf die professionelle Darstellung Ihrer Marke und der Sponsoren. Dies kann auf unserem Kanal "shokzTV" geschehen oder auf Ihrem eigenen Kanal.
                         </div>
                     </div>
                 </Hoverable>
@@ -35,7 +35,7 @@ export default function Services(): ReactElement {
                         </div>
                         <h5>Produzieren</h5>
                         <div className={'description'}>
-                            Wir produzieren den Livestream zu Ihrem Event. Vor einer simplen Spielübertragung bishin zu einer Übertragung mit Gästen aus einem Studio und Videoproduktionen rund um das Event.
+                        Wir produzieren den Livestream zu Ihrem Event. Von einer simplen Spielübertragung bis hin zu einem individuellen Gesamtkonzept mit zusätzlichen Inhalten und Videoproduktionen rund um das Event.
                         </div>
                         
                     </div>
@@ -51,7 +51,7 @@ export default function Services(): ReactElement {
                         </div>
                         <h5>Organisieren</h5>
                         <div className={'description'}>
-                            Auch bei einem der Organisationen kann unsere Expertise mit einfließen. Der besondere Fokus liegt dabei auf der idealen Darstellung Ihrer Marke und Einbindung der Sponsoren. Sprechen SIe uns einfach an für unsere Ideen!
+                        Durch jahrelange Erfahrung in der Szene kann unsere Expertise auch bei der Organisation von Events mit einfließen. Der besondere Fokus liegt dabei auf der idealen Darstellung Ihrer Marke und der innovativen Einbindung der Sponsoren. Sprechen Sie uns einfach an und erfahren Sie unsere Ideen!
                         </div>
                         
                     </div>

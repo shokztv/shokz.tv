@@ -6,8 +6,8 @@ export default function Contact(): ReactElement {
     return <Container id={'contact'}>
         <SectionHeader>Kontakt</SectionHeader>
 
-        <div className={'center'}>Interesse an weiteren Informationen oder an einem Gespräch. Kontaktieren Sie mich gerne unter einem der aufgeführten Möglichkeiten.</div>
-        <div className={'center'}>Außerdem sind die Postfächer auf den Social-Media Kanälen geöffnet, sodass ich auch dort erreichbar bin.</div>
+        <div className={'center'}>Haben Sie Interesse an weiteren Informationen oder an einem Gespräch? Kontaktieren Sie mich gerne unter einer der aufgeführten Möglichkeiten.</div>
+        <div className={'center'}>Außerdem sind die Postfächer auf den Social- Media-Kanälen für Nachrichten geöffnet.</div>
 
         <div className={'contactRow'}>
             <div className={'contactByEmail'}>
