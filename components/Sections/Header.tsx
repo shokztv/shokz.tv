@@ -26,7 +26,7 @@ export default function Header(): ReactElement {
                         Alle Artikel
                     </a>
                 </Link>
-                <a>
+                <a href={'https://3dsupply.de/de/shokztv/'} target={'_blank'} rel={'noopener noreferrer'}>
                     Merch
                 </a>
             </nav>

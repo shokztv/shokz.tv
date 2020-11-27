@@ -31,6 +31,15 @@ const team = [
         realName: 'Pascal Uhlig',
         twitter: 'https://twitter.com/dogeasydota',
     },
+];
+
+const team2 = [
+    {
+        image: '/images/team/dbread.png',
+        name: 'd_bread',
+        realName: '',
+        twitter: 'https://twitter.com/d0mlthebread',
+    },
 ]
 
 export default function Team(): ReactElement {
@@ -57,12 +66,34 @@ export default function Team(): ReactElement {
             </div>)}
         </div>
 
+        <div className={'threeColRow threeColRow2'}>
+            {team2.map(({image, name, realName, twitter}) => <div className={'col'} key={name}>
+                <div className={'colContent'}>
+                    <div className={'userImage'}>
+                        <img src={image} alt={name + ' avatar'} width={'100%'} />
+                    </div>
+
+                    <h5>{name}</h5>
+                    <h6>{realName}</h6>
+
+                    <div className={'socials'}>
+                        {twitter && <Twitter link={twitter}  />}
+                    </div>
+                </div>
+            </div>)}
+        </div>
+
         <style jsx>{`
             .threeColRow{
                 display: flex;
                 align-items: flex-start;
                 margin: -1rem;
                 justify-content: space-between;
+            }
+
+            .threeColRow2 {
+                justify-content: center;
+                margin-top: 1rem;
             }
 
             .col {

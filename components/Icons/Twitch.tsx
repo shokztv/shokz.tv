@@ -16,7 +16,7 @@ export default function Twitch({link = '', smaller, noHover}: Props): ReactEleme
         <style jsx>{`
             .icon {
                 cursor: pointer;
-                fill: #EEE;
+                fill: #DDD;
                 transition: fill 120ms ease-in-out;
             }
             

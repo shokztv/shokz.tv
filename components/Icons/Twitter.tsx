@@ -16,7 +16,7 @@ export default function Twitter({link = '', smaller, noHover}: Props): ReactElem
         <style jsx>{`
             .icon {
                 cursor: pointer;
-                fill: #EEE;
+                fill: #DDD;
                 transition: fill 120ms ease-in-out;
             }
             
