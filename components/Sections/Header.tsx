@@ -1,7 +1,12 @@
-import { ReactElement } from "react";
+import { ReactElement, useCallback } from "react";
 import Link from 'next/link';
+import animateScrollTo from "animated-scroll-to";
 
 export default function Header(): ReactElement {
+    const scrollTo = useCallback((id: string) => {
+        animateScrollTo(document.getElementById(id));
+    }, []);
+    
     return <header>
         <div className={'inner'}>
             <Link href={'/'}>
@@ -12,7 +17,7 @@ export default function Header(): ReactElement {
 
             <nav>
                 <Link href={'/'}>
-                    <a>
+                    <a onClick={() => scrollTo('portfolio')}>
                         Portfolio
                     </a>
                 </Link>

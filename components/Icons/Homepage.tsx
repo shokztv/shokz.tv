@@ -16,7 +16,7 @@ export default function Homepage({link = '', smaller, noHover}: Props): ReactEle
         <style jsx>{`
             .icon {
                 cursor: pointer;
-                fill: #DDD;
+                fill: #AAA;
                 transition: fill 120ms ease-in-out;
             }
             

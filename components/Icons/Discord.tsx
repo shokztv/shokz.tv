@@ -16,7 +16,7 @@ export default function Discord({link = '', smaller, noHover}: Props): ReactElem
         <style jsx>{`
             .icon {
                 cursor: pointer;
-                fill: #DDD;
+                fill: #AAA;
                 transition: fill 120ms ease-in-out;
             }
             .icon:hover, .icon.noHover {

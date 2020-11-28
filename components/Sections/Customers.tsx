@@ -4,7 +4,7 @@ import SectionHeader from "../SectionHeader";
 import SectionSubHeader from "../SectionSubHeader";
 
 export default function Customers(): ReactElement {
-    return <Container>
+    return <Container id={'portfolio'}>
         <SectionHeader noMargin>Kundenportfolio</SectionHeader>
         <SectionSubHeader>// shokztv hat bereits mit folgenden organisationen zusammengearbeitet //</SectionSubHeader>
 

@@ -14,7 +14,7 @@ export default function Stats(): ReactElement {
             </div>
 
             <div className={'description'}>
-                <span className={'highlight'}>shokzTV</span> ist der größte Dota 2-Kanal auf der Livestreaming Platform  Twitch.tv. Es finden Liveübertragungen zu den wichtigsten nationalen & internationalen Evnets der Szene statt. Dazu gehören exklusive Titel wie die ESL Meisterschaft.
+                <span className={'highlight'}>shokzTV</span> ist der größte Dota 2-Kanal auf der Livestreaming Platform  Twitch.tv. Es finden Liveübertragungen zu den wichtigsten nationalen & internationalen Events der Szene statt. Dazu gehören exklusive Titel wie die ESL Meisterschaft.
             </div>
         </div>
 

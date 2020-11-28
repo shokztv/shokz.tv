@@ -11,7 +11,7 @@ import SectionSubHeader from "../SectionSubHeader";
 const team = [
     {
         image: '/images/team/shokztv.png',
-        name: 'shokzTV',
+        name: 'shokz',
         realName: 'Jan Holtmann',
         homepage: 'https://jan-holtmann.de/',
         twitter: 'https://twitter.com/janholtma',

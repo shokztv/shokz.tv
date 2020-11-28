@@ -1,10 +1,15 @@
-import React, { ReactElement } from "react";
+import animateScrollTo from "animated-scroll-to";
+import React, { ReactElement, useCallback } from "react";
 import Discord from "../Icons/Discord";
 import Instagram from "../Icons/Instagram";
 import Twitch from "../Icons/Twitch";
 import Twitter from "../Icons/Twitter";
 
 export default function HeroBanner(): ReactElement {
+    const scrollTo = useCallback((id: string) => {
+        animateScrollTo(document.getElementById(id));
+    }, []);
+    
     return <div className={'heroBanner'}>
         <div className={'inner'}>
             <div className={'logo'}>
@@ -29,7 +34,7 @@ export default function HeroBanner(): ReactElement {
                     </div>
                 </div>
 
-                <div className={'btn'}>
+                <div className={'btn'} onClick={() => scrollTo('portfolio')}>
                     Mehr über shokztv
                 </div>
             </div>
@@ -88,6 +93,7 @@ export default function HeroBanner(): ReactElement {
                 font-size: .8rem;
                 padding: .5rem 1rem;
                 text-transform: uppercase;
+                cursor: pointer;
             }
 
             @media only screen and (max-width: 750px) {
