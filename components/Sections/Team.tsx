@@ -37,7 +37,7 @@ const team2 = [
     {
         image: '/images/team/dbread.png',
         name: 'd_bread',
-        realName: '',
+        realName: 'Dominic Fuss',
         twitter: 'https://twitter.com/d0mlthebread',
     },
 ]
