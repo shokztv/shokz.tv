@@ -5,7 +5,7 @@ import SectionHeader from '../components/SectionHeader';
 import Footer from '../components/Sections/Footer';
 
 export default function dataProtection(): ReactElement {
-    return <PageFrame>
+    return <PageFrame title={'Datenschutz'}>
     <Container>
         <SectionHeader>Datenschutzerklärung</SectionHeader>
         <h1 className="adsimple-311161227"></h1>

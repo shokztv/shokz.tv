@@ -21,16 +21,16 @@ export default function HeroBanner(): ReactElement {
                 <h2>Dota 2-Kommentatorenkanal</h2>
                 <div className={'socials'}>
                     <div className={'link twitter'}>
-                        <Twitter />
+                        <Twitter link={'https://twitter.com/shokzTV'} />
                     </div>
                     <div className={'link twitch'}>
-                        <Twitch />
+                        <Twitch link={'https://twitch.tv/shokzTV'} />
                     </div>
                     <div className={'link discord'}>
-                        <Discord />
+                        <Discord link={'https://discord.gg/hagYNWg'} />
                     </div>
                     <div className={'link instagram'}>
-                        <Instagram />
+                        <Instagram link={'https://www.instagram.com/shokzTV'} />
                     </div>
                 </div>
 

@@ -13,7 +13,7 @@ export async function fetchArticle(slug: string): Promise<Article> {
 //#endregion
 
 const ArticleView = ({article}: {article: Article}) => {
-    return <PageFrame>
+    return <PageFrame title={article.title} seoArticle={article} ogTitle={article.title} ogImage={process.env.NEXT_PUBLIC_API_URL + article.cover}>
         <Container>
             {article && <SingleArticleView article={article} />}
         </Container>

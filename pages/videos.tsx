@@ -12,7 +12,7 @@ export async function fetchAllVideos(): Promise<Partial<Video[]>> {
 //#endregion
 
 const Videos = ({videos}: {videos: Video[]}) => {
-    return <PageFrame>
+    return <PageFrame title={'Twitch VODs'}>
         <Container>
             <br />
             <SectionHeader>Alle Videos</SectionHeader>

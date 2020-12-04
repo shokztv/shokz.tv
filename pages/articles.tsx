@@ -25,7 +25,7 @@ export async function fetchAllArticles(): Promise<Article[]> {
 //#endregion
 
 const Articles = ({articles}: {articles: Article[]}) => {
-    return <PageFrame>
+    return <PageFrame title={'Alle Artikel'}>
         <Container>
             <br />
             <SectionHeader>Alle Artikel</SectionHeader>

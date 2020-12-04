@@ -5,7 +5,7 @@ import Container from '../components/Container';
 import Footer from '../components/Sections/Footer';
 
 export default function imprint(): ReactElement {
-    return <PageFrame>
+    return <PageFrame title={'Impressum'}>
         <Container>
             <SectionHeader>Impressum</SectionHeader>
             <div className={'row'}>
