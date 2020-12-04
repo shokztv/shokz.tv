@@ -13,12 +13,16 @@ export async function fetchArticle(slug: string): Promise<Article> {
 //#endregion
 
 const ArticleView = ({article}: {article: Article}) => {
-    return <PageFrame title={article.title} seoArticle={article} ogTitle={article.title} ogImage={process.env.NEXT_PUBLIC_API_URL + article.cover}>
-        <Container>
-            {article && <SingleArticleView article={article} />}
-        </Container>
-        <Footer />
-    </PageFrame>
+    if(article) {
+        return <PageFrame title={article.title} seoArticle={article} ogTitle={article.title} ogImage={process.env.NEXT_PUBLIC_API_URL + article.cover}>
+            <Container>
+                <SingleArticleView article={article} />
+            </Container>
+            <Footer />
+        </PageFrame>
+    }
+
+    return null;
 }
 
 export async function getStaticProps({params}) {
