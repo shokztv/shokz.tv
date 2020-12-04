@@ -20,7 +20,7 @@ export async function fetchAllArticles(): Promise<Article[]> {
         const chunkedArticles = await get<Article[]>('/article/bySlug?slugs[]=' + chunk.join('&slugs[]='));
         articles.push(...chunkedArticles);
     }
-    return articles.sort(({created: a}, {created: b}) => b - a);
+    return articles.filter(Boolean).sort(({created: a}, {created: b}) => b - a);
 }
 //#endregion
 
