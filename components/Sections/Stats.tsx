@@ -26,7 +26,7 @@ export default function Stats(): ReactElement {
                     </svg>
                 </div>
                 <div className={'divider'} />
-                <div className={'value'}>406.219</div>
+                <div className={'value'}>432.007</div>
                 <div className={'label'}>Stunden zugeschaut</div>
             </div>
             <div className={'stat'}>
@@ -36,7 +36,7 @@ export default function Stats(): ReactElement {
                     </svg>
                 </div>
                 <div className={'divider'} />
-                <div className={'value'}>3.333.316</div>
+                <div className={'value'}>3.515.831</div>
                 <div className={'label'}>Views generiert</div>
             </div>
             <div className={'stat'}>
