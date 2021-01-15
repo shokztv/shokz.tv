@@ -31,6 +31,6 @@
   "devDependencies": {
     "@types/classnames": "^2.2.11",
     "@types/lodash": "^4.14.165",
-    "@types/node-fetch": "^2.5.7"
+    "@types/node-fetch": "^2.5.8"
   }
 }
