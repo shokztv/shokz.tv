@@ -10,7 +10,7 @@
   "dependencies": {
     "@types/node": "^14.14.14",
     "@types/react": "^17.0.0",
-    "animated-scroll-to": "^2.0.12",
+    "animated-scroll-to": "^2.1.0",
     "classnames": "^2.2.6",
     "dayjs": "^1.9.7",
     "html-to-react": "^1.4.5",
