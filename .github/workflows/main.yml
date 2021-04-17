@@ -30,6 +30,12 @@ jobs:
         uses: treosh/lighthouse-ci-action@v7
         with:
           runs: 3
-          urls: https://shokztv.micha.sh
+          urls: |
+            https://shokztv.micha.sh
+            https://shokztv.micha.sh/videos
+            https://shokztv.micha.sh/articles
+            https://shokztv.micha.sh/artikel/schlag-ivy-dota2-ivy-vs-ern
+            https://shokztv.micha.sh/datenschutz
+            https://shokztv.micha.sh/impressum
           serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
           serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
