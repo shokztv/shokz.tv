@@ -24,7 +24,7 @@ export default function ArticleScroll({ articles }: Props): ReactElement {
                 <div className={'details'}>
                     <h2>{title}</h2>
                     <div className={'published'}>veröffentlicht am {formatDate(created)} von {name}</div>
-                    <TruncatedHtml content={body} maxLine={2} />
+                    <div className={'content'} dangerouslySetInnerHTML={{ __html: body }} />
                 </div>
             </div>
         </Link>)}
@@ -64,6 +64,13 @@ export default function ArticleScroll({ articles }: Props): ReactElement {
             .published {
                 font-size: .75rem;
                 margin-bottom: 1rem;
+            }
+
+            .content {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
             }
 
             @media only screen and (max-width: 750px) {

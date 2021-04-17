@@ -11,7 +11,7 @@ const TruncatedHtml = dynamic(
     { ssr: false }
 )
 
-export default function Articles({articles}: {articles: Article[]}): ReactElement {
+export default function Articles({ articles }: { articles: Article[] }): ReactElement {
     const headerArticle = articles[0];
     const recentArticles = articles.slice(1);
 
@@ -26,7 +26,7 @@ export default function Articles({articles}: {articles: Article[]}): ReactElemen
 
                 <div className={'headerArticleInfo'}>
                     <h2>{headerArticle.title}</h2>
-                    <div className={'articleContent'}>{headerArticle.body && <TruncatedHtml content={headerArticle.body}/>}</div>
+                    <div className={'articleContent'} dangerouslySetInnerHTML={{ __html: headerArticle.body }} />
                 </div>
             </div>
         </Link>
@@ -34,9 +34,9 @@ export default function Articles({articles}: {articles: Article[]}): ReactElemen
         <div className={'hr'} />
 
         <div className={'articleRow'}>
-            {recentArticles.map(({id, title, cover, coverWEBP, coverJP2, slug}) => <Link href={'/artikel/[slug]'} as={'/artikel/' + slug} key={id} >
+            {recentArticles.map(({ id, title, cover, coverWEBP, coverJP2, slug }) => <Link href={'/artikel/[slug]'} as={'/artikel/' + slug} key={id} >
                 <div className={'article'}>
-                    <h4><TruncatedHtml content={title} maxLine={2} /></h4>
+                    <h3>{title}</h3>
                     <div className={'articleRowThumbnail'}>
                         <Picture src={cover} webp={coverWEBP} jp2={coverJP2} alt={title} rounded />
                     </div>
@@ -84,12 +84,17 @@ export default function Articles({articles}: {articles: Article[]}): ReactElemen
                 flex-direction: column;
                 align-items: stretch;
                 padding: 0 1rem;
+                justify-content: space-between;
             }
 
-            h4 {
+            h3 {
                 text-align: left;
                 margin-bottom: .5rem;
                 margin-top: 0rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
             }
 
             h2 {
@@ -98,6 +103,10 @@ export default function Articles({articles}: {articles: Article[]}): ReactElemen
 
             .articleContent {
                 line-height: 1.4rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
             }
 
             @media only screen and (max-width: 800px) {
