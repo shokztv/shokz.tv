@@ -22,14 +22,14 @@ jobs:
           vercel-project-id: ${{ secrets.PROJECT_ID}}
           working-directory: ./
           alias-domains: |
-            preview.flow.micha.sh
-            ${{ steps.vars.outputs.name }}.flow.micha.sh
-            ${{ steps.vars.outputs.sha }}.flow.micha.sh
+            shokztv.micha.sh
+            ${{ steps.vars.outputs.name }}.shokztv.micha.sh
+            ${{ steps.vars.outputs.sha }}.shokztv.micha.sh
           
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v7
         with:
-          runs: 5
-          urls: https://preview.flow.micha.sh
+          runs: 3
+          urls: https://shokztv.micha.sh
           serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
           serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
