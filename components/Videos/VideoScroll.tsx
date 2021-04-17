@@ -10,7 +10,7 @@ interface Props {
 export default function VideoScroll({ videos }: Props): ReactElement {
     return <div className={'vodGrid'}>
         <Head>
-            <link rel="preload" as="image" crossOrigin="anonymous" href={process.env.API_URL + videos[0].thumbnailWEBP} />
+            <link rel="preload" as="image" type="image/webp" crossOrigin="anonymous" href={process.env.API_URL + videos[0].thumbnailWEBP} />
         </Head>
 
         {videos.map(({ id, title, source, thumbnail, thumbnailJP2, thumbnailWEBP }) => <a aria-label={title} title={title} key={id} className={'videoItem'} href={source} target={'_blank'} rel={'noopener'}>
