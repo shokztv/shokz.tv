@@ -10,18 +10,18 @@ interface Props {
     rounded?: boolean;
 }
 
-export default function Picture({alt, jp2, src, webp, rounded}: Props): ReactElement {
+export default function Picture({ alt, jp2, src, webp, rounded }: Props): ReactElement {
     const [loaded, setLoaded] = useState(false);
 
-    return <VisibilitySensor  scrollCheck partialVisibility={true}>
+    return <VisibilitySensor scrollCheck partialVisibility={true}>
         {({ isVisible }) => <div className={'container'}>
             {(loaded || isVisible) && <picture>
-                <source type="image/webp" srcSet={process.env.NEXT_PUBLIC_API_URL + webp}/>
-                <source type="image/jp2" srcSet={process.env.NEXT_PUBLIC_API_URL + jp2}/>
-                <img className={classNames('image', {rounded})} src={process.env.NEXT_PUBLIC_API_URL + src} alt={alt} onLoad={() => setLoaded(true)}/>
+                <source type="image/webp" srcSet={process.env.API_URL + webp} />
+                <source type="image/jp2" srcSet={process.env.API_URL + jp2} />
+                <img className={classNames('image', { rounded })} src={process.env.API_URL + src} alt={alt} onLoad={() => setLoaded(true)} />
             </picture>}
 
-            {!loaded &&  <div className={'imageSkeleton'} />}
+            {!loaded && <div className={'imageSkeleton'} />}
 
             <style jsx>{`
 

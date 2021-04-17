@@ -12,9 +12,9 @@ export async function fetchArticle(slug: string): Promise<Article> {
 }
 //#endregion
 
-const ArticleView = ({article}: {article: Article}) => {
-    if(article) {
-        return <PageFrame title={article.title} seoArticle={article} ogTitle={article.title} ogImage={process.env.NEXT_PUBLIC_API_URL + article.cover}>
+const ArticleView = ({ article }: { article: Article }) => {
+    if (article) {
+        return <PageFrame title={article.title} seoArticle={article} ogTitle={article.title} ogImage={process.env.API_URL + article.cover}>
             <Container>
                 <SingleArticleView article={article} />
             </Container>
@@ -25,7 +25,7 @@ const ArticleView = ({article}: {article: Article}) => {
     return null;
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
     const article = await fetchArticle(params.slug);
     return {
         props: {

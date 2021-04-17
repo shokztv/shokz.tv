@@ -63,9 +63,9 @@ interface Props {
 //#region <api>
 export async function get<T>(url: string): Promise<T> {
     try {
-        const response = await fetch(process.env.NEXT_PUBLIC_API_URL + url);
+        const response = await fetch(process.env.API_URL + url);
         return await response.json();
-    } catch(error) {
+    } catch (error) {
         console.log(error);
     }
 }
@@ -79,7 +79,7 @@ export async function fetchFeaturedArticle(): Promise<Partial<Article[]>> {
 }
 //#endregion
 
-const Index = ({articles, videos}: Props) => {
+const Index = ({ articles, videos }: Props) => {
     return <PageFrame>
         <HeroBanner />
         <LatestVods videos={videos} />
