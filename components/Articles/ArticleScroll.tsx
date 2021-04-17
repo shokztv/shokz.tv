@@ -2,12 +2,19 @@ import { ReactElement } from "react";
 import { Article } from "../../pages";
 import Picture from "../Picture";
 import dayjs from 'dayjs';
-import TruncatedHtml from "../TruncatedHtml";
+import Head from 'next/head';
 import Link from 'next/link';
 
 
 export function formatDate(ts: number = null, format: string = 'DD.MM.YYYY'): string {
     return (ts ? dayjs.unix(ts) : dayjs()).format(format);
+}
+
+export function reduceBody(content: string): string {
+    let withoutHTMLTags = content.replace(/(<([^>]+)>)/gi, "");
+    let withoutNbsp = withoutHTMLTags.replace(/&nbsp;/g, " ");
+    let truncatedContent = withoutNbsp.substring(0, 300);
+    return truncatedContent;
 }
 
 interface Props {
@@ -16,6 +23,12 @@ interface Props {
 
 export default function ArticleScroll({ articles }: Props): ReactElement {
     return <div className={'articles'}>
+        <Head>
+            <link rel="preload" as="image" crossOrigin="anonymous" href={process.env.API_URL + articles[0].coverWEBP} />
+            <link rel="preload" as="image" crossOrigin="anonymous" href={process.env.API_URL + articles[0].coverJP2} />
+            <link rel="preload" as="image" crossOrigin="anonymous" href={process.env.API_URL + articles[0].cover} />
+        </Head>
+
         {articles.map(({ id, body, created, title, cover, coverJP2, coverWEBP, author: { name }, slug }) => <Link key={id} href={'/artikel/[slug]'} as={'/artikel/' + slug}>
             <div className={'articleRow'}>
                 <div className={'cover'}>
@@ -24,7 +37,7 @@ export default function ArticleScroll({ articles }: Props): ReactElement {
                 <div className={'details'}>
                     <h2>{title}</h2>
                     <div className={'published'}>veröffentlicht am {formatDate(created)} von {name}</div>
-                    <div className={'content'} dangerouslySetInnerHTML={{ __html: body }} />
+                    <div className={'content'}>{reduceBody(body)}</div>
                 </div>
             </div>
         </Link>)}

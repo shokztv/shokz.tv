@@ -4,12 +4,12 @@ interface Props {
     children: string;
 }
 
-export default function SectionSubHeader({children}: Props): ReactElement {
-    return <h5>
+export default function SectionSubHeader({ children }: Props): ReactElement {
+    return <h4>
         {children}
-        
+
         <style jsx>{`
-            h5 {
+            h4 {
                 font-size: 15px;
                 font-weight: bold;
                 font-style: italic;
@@ -20,5 +20,5 @@ export default function SectionSubHeader({children}: Props): ReactElement {
                 color: var(--orange);
             }    
         `}</style>
-    </h5>
+    </h4>
 }

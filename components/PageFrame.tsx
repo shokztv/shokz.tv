@@ -107,7 +107,6 @@ export default function PageFrame({ children, title, ogTitle, ogDescription, ogI
                 content="Die deutschsprachige Dota 2 Startseite | Events, Neuigkeiten, Interviews, Videos & mehr | Exklusiver Partner der ESL Meisterschaft in Dota 2" />
             <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
             <meta name="theme-color" content="#0A1C3F" />
-            <link rel="manifest" href="/manifest.json" />
             <link rel="preconnect" href="//web-api.shokz.tv/" />
 
             <JsonLd<Organization>

@@ -4,13 +4,13 @@ import Container from "../Container";
 import Picture from "../Picture";
 import SectionHeader from "../SectionHeader";
 
-export default function LatestVods({videos}: {videos: Video[]}): ReactElement {
+export default function LatestVods({ videos }: { videos: Video[] }): ReactElement {
     return <Container>
         <SectionHeader>Neuste Videos</SectionHeader>
 
         <div className={'videoContainer'}>
-            {videos.slice(0, 3).map(({id, thumbnail, thumbnailWEBP, thumbnailJP2, source}, idx) => <div className={'vod'} key={id}>
-                <a href={source} target={'_blank'}>
+            {videos.slice(0, 3).map(({ id, thumbnail, thumbnailWEBP, thumbnailJP2, source, title }, idx) => <div className={'vod'} key={id}>
+                <a href={source} target={'_blank'} rel={'noopener'} aria-label={title} title={title}>
                     <Picture src={thumbnail} webp={thumbnailWEBP} jp2={thumbnailJP2} alt={`thumbnail-${idx}`} />
                 </a>
             </div>)}

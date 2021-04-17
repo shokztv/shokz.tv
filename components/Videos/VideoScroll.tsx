@@ -6,9 +6,9 @@ interface Props {
     videos: Video[];
 }
 
-export default function VideoScroll({videos}: Props): ReactElement {
+export default function VideoScroll({ videos }: Props): ReactElement {
     return <div className={'vodGrid'}>
-        {videos.map(({id, title, source, thumbnail, thumbnailJP2, thumbnailWEBP}) => <a key={id} className={'videoItem'} href={source} target={'_blank'} rel={'noopener'}>
+        {videos.map(({ id, title, source, thumbnail, thumbnailJP2, thumbnailWEBP }) => <a aria-label={title} title={title} key={id} className={'videoItem'} href={source} target={'_blank'} rel={'noopener'}>
             <Picture alt={title} jp2={thumbnailJP2} src={thumbnail} webp={thumbnailWEBP} rounded />
         </a>)}
 

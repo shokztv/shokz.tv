@@ -3,13 +3,8 @@ import { Article } from "../../pages";
 import Container from "../Container";
 import Picture from "../Picture";
 import SectionHeader from "../SectionHeader";
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
-
-const TruncatedHtml = dynamic(
-    () => import('../TruncatedHtml'),
-    { ssr: false }
-)
+import { reduceBody } from "../Articles/ArticleScroll";
 
 export default function Articles({ articles }: { articles: Article[] }): ReactElement {
     const headerArticle = articles[0];
@@ -26,7 +21,7 @@ export default function Articles({ articles }: { articles: Article[] }): ReactEl
 
                 <div className={'headerArticleInfo'}>
                     <h2>{headerArticle.title}</h2>
-                    <div className={'articleContent'} dangerouslySetInnerHTML={{ __html: headerArticle.body }} />
+                    <div className={'articleContent'}>{reduceBody(headerArticle.body)}</div>
                 </div>
             </div>
         </Link>
