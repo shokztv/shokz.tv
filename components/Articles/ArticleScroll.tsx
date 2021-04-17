@@ -25,8 +25,6 @@ export default function ArticleScroll({ articles }: Props): ReactElement {
     return <div className={'articles'}>
         <Head>
             <link rel="preload" as="image" crossOrigin="anonymous" href={process.env.API_URL + articles[0].coverWEBP} />
-            <link rel="preload" as="image" crossOrigin="anonymous" href={process.env.API_URL + articles[0].coverJP2} />
-            <link rel="preload" as="image" crossOrigin="anonymous" href={process.env.API_URL + articles[0].cover} />
         </Head>
 
         {articles.map(({ id, body, created, title, cover, coverJP2, coverWEBP, author: { name }, slug }) => <Link key={id} href={'/artikel/[slug]'} as={'/artikel/' + slug}>
