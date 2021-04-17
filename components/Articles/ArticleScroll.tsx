@@ -14,9 +14,9 @@ interface Props {
     articles: Article[];
 }
 
-export default function ArticleScroll({articles}: Props): ReactElement {
+export default function ArticleScroll({ articles }: Props): ReactElement {
     return <div className={'articles'}>
-        {articles.map(({id, body, created, title, cover, coverJP2, coverWEBP, author: {name}, slug}) => <Link key={id} href={'/artikel/[slug]'} as={'/artikel/' + slug}>
+        {articles.map(({ id, body, created, title, cover, coverJP2, coverWEBP, author: { name }, slug }) => <Link key={id} href={'/artikel/[slug]'} as={'/artikel/' + slug}>
             <div className={'articleRow'}>
                 <div className={'cover'}>
                     <Picture alt={title} rounded webp={coverWEBP} src={cover} jp2={coverJP2} />
@@ -24,7 +24,7 @@ export default function ArticleScroll({articles}: Props): ReactElement {
                 <div className={'details'}>
                     <h2>{title}</h2>
                     <div className={'published'}>veröffentlicht am {formatDate(created)} von {name}</div>
-                    <TruncatedHtml content={body} maxLine={2}/>
+                    <TruncatedHtml content={body} maxLine={2} />
                 </div>
             </div>
         </Link>)}

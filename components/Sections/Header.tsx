@@ -1,17 +1,15 @@
 import { ReactElement, useCallback } from "react";
 import Link from 'next/link';
-import animateScrollTo from "animated-scroll-to";
+import Image from 'next/image';
 
 export default function Header(): ReactElement {
-    const scrollTo = useCallback((id: string) => {
-        animateScrollTo(document.getElementById(id));
-    }, []);
-    
+    const scrollTo = useCallback((id: string) => document.getElementById(id).scrollIntoView({ behavior: 'smooth' }), []);
+
     return <header>
         <div className={'inner'}>
             <Link href={'/'}>
                 <div className={'logo'}>
-                    <img height={'50px'} src={'/images/logo.png'} />
+                    <Image width={117} height={'50px'} src={'/images/logo.png'} alt={'Logo'} />
                 </div>
             </Link>
 

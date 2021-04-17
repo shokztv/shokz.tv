@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import Container from "../Container";
 import SectionHeader from "../SectionHeader";
 import SectionSubHeader from "../SectionSubHeader";
+import Image from 'next/image';
 
 export default function Customers(): ReactElement {
     return <Container id={'portfolio'}>
@@ -10,16 +11,16 @@ export default function Customers(): ReactElement {
 
         <div className={'customers'}>
             <div className={'customer'}>
-                <img src={'/images/customers/eslm.png'} />
+                <Image width={128} height={128} alt={'ESL Meisterschaft Logo'} src={'/images/customers/eslm.png'} />
             </div>
             <div className={'customer'}>
-                <img src={'/images/customers/weplay.png'} />
+                <Image width={200} height={128} alt={'weplay Logo'} src={'/images/customers/weplay.png'} />
             </div>
             <div className={'customer'}>
-                <img src={'/images/customers/eslone.png'} />
+                <Image width={128} height={128} alt={'ESL One Logo'} src={'/images/customers/eslone.png'} />
             </div>
             <div className={'customer'}>
-                <img src={'/images/customers/joindota.png'} />
+                <Image width={128} height={128} alt={'joinDOTA Logo'} src={'/images/customers/joindota.png'} />
             </div>
         </div>
 

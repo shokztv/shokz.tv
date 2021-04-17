@@ -1,21 +1,19 @@
-import animateScrollTo from "animated-scroll-to";
 import React, { ReactElement, useCallback } from "react";
 import Discord from "../Icons/Discord";
 import Instagram from "../Icons/Instagram";
 import Twitch from "../Icons/Twitch";
 import Twitter from "../Icons/Twitter";
+import Image from 'next/image';
 
 export default function HeroBanner(): ReactElement {
-    const scrollTo = useCallback((id: string) => {
-        animateScrollTo(document.getElementById(id));
-    }, []);
-    
+    const scrollTo = useCallback((id: string) => document.getElementById(id).scrollIntoView({ behavior: 'smooth' }), []);
+
     return <div className={'heroBanner'}>
         <div className={'inner'}>
             <div className={'logo'}>
-                <img src={'/images/herobanner_logo.png'} height={'120px'} />
+                <Image width={280} src={'/images/herobanner_logo.png'} height={120} alt={'ShokzTV Logo'} />
             </div>
-            
+
             <div className={'heroInfo'}>
                 <h1>shokzTV</h1>
                 <h2>Dota 2-Kommentatorenkanal</h2>

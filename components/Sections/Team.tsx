@@ -1,12 +1,11 @@
 import { ReactElement } from "react";
 import Container from "../Container";
-import Discord from "../Icons/Discord";
 import Homepage from "../Icons/Homepage";
 import Instagram from "../Icons/Instagram";
-import Twitch from "../Icons/Twitch";
 import Twitter from "../Icons/Twitter";
 import SectionHeader from "../SectionHeader";
 import SectionSubHeader from "../SectionSubHeader";
+import Image from 'next/image';
 
 const team = [
     {
@@ -48,18 +47,18 @@ export default function Team(): ReactElement {
         <SectionSubHeader>// Moderatoren, Kommentatoren und Analysten die mit uns arbeiten //</SectionSubHeader>
 
         <div className={'threeColRow'}>
-            {team.map(({image, name, realName, homepage, twitter, instagram}) => <div className={'col'} key={name}>
+            {team.map(({ image, name, realName, homepage, twitter, instagram }) => <div className={'col'} key={name}>
                 <div className={'colContent'}>
                     <div className={'userImage'}>
-                        <img src={image} alt={name + ' avatar'} width={'100%'} />
+                        <Image src={image} alt={name + ' avatar'} width={200} height={200} />
                     </div>
 
                     <h5>{name}</h5>
                     <h6>{realName}</h6>
 
                     <div className={'socials'}>
-                        {homepage && <Homepage link={homepage}  />}
-                        {twitter && <Twitter link={twitter}  />}
+                        {homepage && <Homepage link={homepage} />}
+                        {twitter && <Twitter link={twitter} />}
                         {instagram && <Instagram link={instagram} />}
                     </div>
                 </div>
@@ -67,17 +66,17 @@ export default function Team(): ReactElement {
         </div>
 
         <div className={'threeColRow threeColRow2'}>
-            {team2.map(({image, name, realName, twitter}) => <div className={'col'} key={name}>
+            {team2.map(({ image, name, realName, twitter }) => <div className={'col'} key={name}>
                 <div className={'colContent'}>
                     <div className={'userImage'}>
-                        <img src={image} alt={name + ' avatar'} width={'100%'} />
+                        <Image src={image} alt={name + ' avatar'} width={200} height={200} />
                     </div>
 
                     <h5>{name}</h5>
                     <h6>{realName}</h6>
 
                     <div className={'socials'}>
-                        {twitter && <Twitter link={twitter}  />}
+                        {twitter && <Twitter link={twitter} />}
                     </div>
                 </div>
             </div>)}

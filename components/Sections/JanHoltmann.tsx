@@ -1,13 +1,13 @@
 import { ReactElement } from "react";
 import Container from "../Container";
-import SectionHeader from "../SectionHeader";
+import Image from 'next/image';
 
 export default function JanHoltmann(): ReactElement {
     return <Container bg={'blue'} reduceSpacing>
         <div className={'row outer'}>
             <div className={'row'}>
                 <div className={'avatar'}>
-                    <img src={'/images/janholtmann.png'} alt={'jan holtmann avatar'} />
+                    <Image src={'/images/janholtmann.png'} alt={'jan holtmann avatar'} height={110} width={110} />
                 </div>
                 <div className={'info'}>
                     <h6>Jan "shokz" Holtmann</h6>
