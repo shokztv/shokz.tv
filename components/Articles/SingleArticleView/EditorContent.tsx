@@ -1,5 +1,5 @@
-import React, { ReactElement, useMemo } from "react";
-import HtmlToReact  from 'html-to-react';
+import React, { ReactElement } from "react";
+import HtmlToReact from 'html-to-react';
 import YouTube from 'react-youtube-embed';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 var processNodeDefinitions = new HtmlToReact.ProcessNodeDefinitions(React);
@@ -9,11 +9,11 @@ var processingInstructions = [
         shouldProcessNode: (node) => {
             return node.name && node.name === 'oembed';
         },
-        processNode: (node) =>  {
-            if(node.attribs && node.attribs.url.indexOf('youtube') !== -1) {
+        processNode: (node) => {
+            if (node.attribs && node.attribs.url.indexOf('youtube') !== -1) {
                 return <YouTube id={node.attribs.url} />;
             }
-            if(node.attribs && node.attribs.url.indexOf('twitter') !== -1) {
+            if (node.attribs && node.attribs.url.indexOf('twitter') !== -1) {
                 const [, tweetId] = node.attribs.url.match(/^https:\/\/twitter\.com\/.*\/status\/(.*)$/);
                 return <TwitterTweetEmbed tweetId={tweetId} />;
             }
@@ -28,7 +28,7 @@ var processingInstructions = [
     },
 ];
 
-export default function EditorContent({text}: {text: string;}): ReactElement {
+export default function EditorContent({ text }: { text: string; }): ReactElement {
     const html = (new HtmlToReact.Parser()).parseWithInstructions(text, () => true, processingInstructions);
 
     return <div className={'content'}>
