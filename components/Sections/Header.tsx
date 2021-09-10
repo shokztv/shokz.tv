@@ -129,6 +129,12 @@ export default function Header(): ReactElement {
               grid-gap: 1rem;
               flex-wrap: wrap;
               padding: 1rem 2rem 2rem 2rem;
+              align-items: center;
+              justify-content: flex-start;
+            }
+
+            nav.mobileMenu > :global(a) {
+              width: calc(50% - .5rem);
             }
 
             a {
