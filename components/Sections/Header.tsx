@@ -1,48 +1,57 @@
 import { ReactElement, useCallback } from "react";
-import Link from 'next/link';
-import Image from 'next/image';
+
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Header(): ReactElement {
-    const scrollTo = useCallback((id: string) => document.getElementById(id).scrollIntoView({ behavior: 'smooth' }), []);
+  const scrollTo = useCallback(
+    (id: string) =>
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" }),
+    []
+  );
 
-    return <header>
-        <div className={'inner'}>
-            <Link href={'/'}>
-                <div className={'logo'}>
-                    <Image width={117} height={'50px'} src={'/images/logo.png'} alt={'Logo'} />
-                </div>
-            </Link>
+  return (
+    <header>
+      <div className={"inner"}>
+        <Link href={"/"}>
+          <div className={"logo"}>
+            <Image
+              width={117}
+              height={"50px"}
+              src={"/images/logo.png"}
+              alt={"Logo"}
+            />
+          </div>
+        </Link>
 
-            <nav>
-                <Link href={'/'}>
-                    <a onClick={() => scrollTo('portfolio')}>
-                        Portfolio
-                    </a>
-                </Link>
-                <Link href={'/videos'}>
-                    <a>
-                        Alle Videos
-                    </a>
-                </Link>
-                <Link href={'/articles'}>
-                    <a>
-                        Alle Artikel
-                    </a>
-                </Link>
-                <a href={'https://3dsupply.de/de/shokztv/'} target={'_blank'} rel={'noopener noreferrer'}>
-                    Merch
-                </a>
-            </nav>
-        </div>
+        <nav>
+          <Link href={"/"}>
+            <a onClick={() => scrollTo("portfolio")}>Portfolio</a>
+          </Link>
+          <Link href={"/videos"}>
+            <a>Alle Videos</a>
+          </Link>
+          <Link href={"/articles"}>
+            <a>Alle Artikel</a>
+          </Link>
+          <a
+            href={"https://3dsupply.de/de/shokztv/"}
+            target={"_blank"}
+            rel={"noopener noreferrer"}
+          >
+            Merch
+          </a>
+        </nav>
+      </div>
 
-        <style jsx>{`
+      <style jsx>{`
             header {
                 position: fixed;
                 width: 100vw;
                 height: 4rem;
                 color: #FFF;
                 background-color: var(--blue);
-                box-shadow: 2px 2px 10px rgba(0,0,0,.8);
+                box-shadow: 11px 15px 29px 0 rgba(48,48,48,0.07);
                 z-index: 2;
             }
 
@@ -84,5 +93,6 @@ export default function Header(): ReactElement {
                 }
             }
         `}</style>
-    </header>;
+    </header>
+  );
 }
